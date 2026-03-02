@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_textfields"
+        android:icon="@drawable/baseline_short_text_24"
+        android:title="TextFields" />
+    <item
+        android:id="@+id/navigation_buttons"
+        android:icon="@drawable/twotone_ads_click_24"
+        android:title="Botones" />
+    <item
+        android:id="@+id/navigation_selection"
+        android:icon="@drawable/outline_assignment_turned_in_24"
+        android:title="Selección" />
+    <item
+        android:id="@+id/navigation_lists"
+        android:icon="@drawable/outline_assignment_24"
+        android:title="Listas" />
+    <item
+        android:id="@+id/navigation_info"
+        android:icon="@drawable/outline_assignment_late_24"
+        android:title="Información" />
+</menu>
