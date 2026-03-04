@@ -15,63 +15,72 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Botones y elementos interactivos"
+            android:text="Listas"
             android:textSize="24sp"
             android:textStyle="bold"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Permiten al usuario ejecutar acciones o seleccionar opciones."
+            android:text="Las listas muestran colecciones de elementos y permiten al usuario interactuar con ellos."
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Button -->
+        <!-- ListView -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button: Botón estándar para realizar acciones."
+            android:text="ListView: Lista vertical clásica."
             android:textStyle="bold"
             android:layout_marginTop="16dp"/>
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginTop="8dp"/>
 
-        <!-- ImageButton -->
-        <Button
-            android:id="@+id/button"
+        <!-- Spinner (lista desplegable) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spinner: Lista desplegable para seleccionar una opción."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <Spinner
+            android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:text="Button" />
+            android:layout_marginTop="8dp"/>
 
+        <!-- RecyclerView -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ImageButton: Botón con imagen en lugar de texto."
+            android:text="RecyclerView: Lista moderna y eficiente, altamente personalizable."
             android:textStyle="bold"
             android:layout_marginTop="16dp"/>
-
-
-        <!-- Espacio final -->
-        <ImageButton
-            android:id="@+id/imageButton2"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_launcher_foreground" /><!-- FloatingActionButton -->
+            android:layout_height="150dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/editbox_background"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <!-- ExpandableListView (opcional) -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="FloatingActionButton: Botón de acción flotante para la acción principal."
+            android:text="ExpandableListView: Lista con grupos expandibles."
             android:textStyle="bold"
             android:layout_marginTop="16dp"/>
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@android:drawable/ic_dialog_email"
-            android:contentDescription="Correo"
-            android:clickable="true"
-            android:focusable="true"
-            app:fabSize="normal"/>
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/editbox_background"/>
 
         <View android:layout_height="24dp" android:layout_width="match_parent"/>
 

@@ -1,14 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".frag3">
+    android:paddingTop="50dp"
+    android:paddingHorizontal="30dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <!-- Título principal -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elementos de selección"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Permiten al usuario seleccionar opciones."
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- ChipGroup y Chips -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chip: Elementos compactos que representan una entrada, filtro o acción."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip 1"
+                style="@style/Widget.MaterialComponents.Chip.Entry"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip 2"
+                style="@style/Widget.MaterialComponents.Chip.Entry"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip 3"
+                style="@style/Widget.MaterialComponents.Chip.Entry"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip 4"
+                style="@style/Widget.MaterialComponents.Chip.Entry"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip 5"
+                style="@style/Widget.MaterialComponents.Chip.Entry"/>
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- CheckBox -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckBox: Permite seleccionar una o varias opciones."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox"
+            android:minHeight="48dp"/>
+
+        <!-- RadioGroup y RadioButtons -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RadioButton: Permite seleccionar una opción entre varias."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opción 1"
+                android:minHeight="48dp"/>
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opción 2"
+                android:minHeight="48dp"/>
+        </RadioGroup>
+
+        <!-- ToggleButton -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton: Botón que mantiene su estado (encendido/apagado)."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <ToggleButton
+            android:id="@+id/toggleButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textOn="Encendido"
+            android:textOff="Apagado"
+            android:minHeight="48dp"/>
+
+        <!-- Switch -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Switch: Similar al ToggleButton, con diseño deslizable."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Switch"
+            android:minHeight="48dp"/>
+
+        <!-- RatingBar -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RatingBar: Permite mostrar/recibir una puntuación."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="3.5"
+            android:stepSize="0.5"
+            android:layout_marginTop="4dp"/>
+
+        <!-- SeekBar -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SeekBar: Barra deslizable para ajustar un valor."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="40"
+            android:layout_marginTop="4dp"/>
+        <!-- Espacio final -->
+        <View android:layout_height="24dp" android:layout_width="match_parent"/>
+
+    </LinearLayout>
+</ScrollView>

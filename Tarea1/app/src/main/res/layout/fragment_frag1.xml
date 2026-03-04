@@ -1,114 +1,282 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="50dp">
+    android:paddingTop="50dp"
+    android:paddingHorizontal="30dp">
 
-
-    <TextView
-        android:id="@+id/textView2"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        <!-- Título principal -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Texto"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
 
-    <EditText
-        android:id="@+id/editTextTextPassword3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Los elementos de texto permiten mostrar o ingresar información alfanumérica."
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
 
-    <EditText
-        android:id="@+id/editTextNumberPassword2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberPassword" />
-
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress" />
-
-    <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="phone" />
-
-    <EditText
-        android:id="@+id/editTextTextPostalAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPostalAddress" />
-
-    <EditText
-        android:id="@+id/editTextTextMultiLine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine" />
-
-    <EditText
-        android:id="@+id/editTextTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="time" />
-
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date" />
-
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number" />
-
-    <AutoCompleteTextView
-        android:id="@+id/autoCompleteTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="AutoCompleteTextView" />
-
-    <MultiAutoCompleteTextView
-        android:id="@+id/multiAutoCompleteTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="MultiAutoCompleteTextView" />
-
-    <CheckedTextView
-        android:id="@+id/checkedTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CheckedTextView" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.google.android.material.textfield.TextInputEditText
+        <!-- TextView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView: Muestra texto estático que el usuario no puede editar."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="hint" />
-    </com.google.android.material.textfield.TextInputLayout>
-</LinearLayout>
+            android:text="Este es un TextView de ejemplo"
+            android:padding="8dp"
+            android:background="@android:drawable/editbox_background"
+            android:minHeight="48dp"/>
+
+        <!-- EditText texto normal -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EditText (texto normal): Permite introducir cualquier texto."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribe tu nombre"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:paddingVertical="8dp"/>
+
+        <!-- EditText contraseña (texto) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EditText (contraseña): Oculta los caracteres introducidos."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:paddingVertical="8dp"/>
+
+        <!-- EditText contraseña numérica -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EditText (contraseña numérica): Solo números, ocultos."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/editTextNumberPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PIN numérico"
+            android:inputType="numberPassword"
+            android:minHeight="48dp"
+            android:paddingVertical="8dp"/>
+
+        <!-- EditText email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EditText (email): Optimizado para direcciones de correo."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="correo@ejemplo.com"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:paddingVertical="8dp"/>
+
+        <!-- EditText teléfono -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EditText (teléfono): Muestra el teclado numérico para teléfonos."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="+34 123 456 789"
+            android:inputType="phone"
+            android:minHeight="48dp"
+            android:paddingVertical="8dp"/>
+
+        <!-- EditText dirección postal -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EditText (dirección postal): Para direcciones completas."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/editTextPostalAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Calle, número, ciudad"
+            android:inputType="textPostalAddress"
+            android:minHeight="48dp"
+            android:paddingVertical="8dp"/>
+
+        <!-- EditText multilínea -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EditText (multilínea): Permite varias líneas de texto."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/editTextMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribe varias líneas..."
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top"
+            android:minHeight="48dp"
+            android:paddingVertical="8dp"/>
+
+        <!-- EditText hora -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EditText (hora): Para ingresar horas en formato HH:MM."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/editTextTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="14:30"
+            android:inputType="time"
+            android:minHeight="48dp"
+            android:paddingVertical="8dp"/>
+
+        <!-- EditText fecha -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EditText (fecha): Para ingresar fechas en formato DD/MM/AAAA."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="31/12/2025"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:paddingVertical="8dp"/>
+
+        <!-- EditText número -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EditText (número): Solo permite caracteres numéricos."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="12345"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:paddingVertical="8dp"/>
+
+        <!-- AutoCompleteTextView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AutoCompleteTextView: Sugiere opciones mientras se escribe."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribe y aparecerán sugerencias"
+            android:completionThreshold="1"
+            android:minHeight="48dp"
+            android:paddingVertical="8dp"/>
+
+        <!-- MultiAutoCompleteTextView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MultiAutoCompleteTextView: Sugiere y permite múltiples entradas separadas."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <MultiAutoCompleteTextView
+            android:id="@+id/multiAutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribe varios elementos separados por comas"
+            android:completionThreshold="1"
+            android:minHeight="48dp"
+            android:paddingVertical="8dp"/>
+
+        <!-- CheckedTextView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckedTextView: Texto con un check seleccionable."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <CheckedTextView
+            android:id="@+id/checkedTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opción con check"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="48dp"
+            android:paddingVertical="8dp"/>
+
+        <!-- TextInputLayout (Material) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextInputLayout: Contenedor Material con etiqueta flotante."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Campo con diseño Material"
+            app:endIconMode="clear_text"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:paddingVertical="8dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Espacio final -->
+        <View android:layout_height="24dp" android:layout_width="match_parent"/>
+
+    </LinearLayout>
+</ScrollView>

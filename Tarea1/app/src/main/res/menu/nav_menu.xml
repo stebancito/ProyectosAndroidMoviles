@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_circle_24"
+        android:title="Bienvenida" />
+    <item
         android:id="@+id/navigation_textfields"
         android:icon="@drawable/baseline_short_text_24"
         android:title="TextFields" />
