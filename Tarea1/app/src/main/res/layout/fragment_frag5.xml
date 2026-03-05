@@ -15,6 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/TextViewInfo"
             android:text="Elementos de información"
             android:textSize="24sp"
             android:textStyle="bold"/>
@@ -85,6 +86,12 @@
             android:progress="65"
             android:layout_marginTop="4dp"/>
 
+        <Button
+            android:id="@+id/btnIncrementar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incrementar progreso"
+            android:layout_marginTop="16dp"/>
 
         <!-- Espacio final -->
         <View android:layout_height="24dp" android:layout_width="match_parent"/>

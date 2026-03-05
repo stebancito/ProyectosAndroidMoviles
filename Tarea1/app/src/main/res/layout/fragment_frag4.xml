@@ -11,7 +11,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Título principal -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,9 +33,10 @@
             android:textStyle="bold"
             android:layout_marginTop="16dp"/>
         <ListView
-            android:id="@+id/listView"
+            android:id="@+id/listViews"
             android:layout_width="match_parent"
             android:layout_height="150dp"
+            android:backgroundTint="@color/gray"
             android:background="@android:drawable/editbox_background"
             android:layout_marginTop="8dp"/>
 
@@ -48,11 +48,23 @@
             android:textStyle="bold"
             android:layout_marginTop="16dp"/>
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/spinnerr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"/>
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ExpandableListView: Lista con grupos expandibles."
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <ExpandableListView
+            android:id="@+id/expandableListVieww"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/gray"
+            android:background="@android:drawable/editbox_background"/>
         <!-- RecyclerView -->
         <TextView
             android:layout_width="wrap_content"
@@ -61,26 +73,14 @@
             android:textStyle="bold"
             android:layout_marginTop="16dp"/>
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/recyclerVieww"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginTop="8dp"
+            android:backgroundTint="@color/gray"
             android:background="@android:drawable/editbox_background"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
-        <!-- ExpandableListView (opcional) -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ExpandableListView: Lista con grupos expandibles."
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"/>
-        <ExpandableListView
-            android:id="@+id/expandableListView"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="8dp"
-            android:background="@android:drawable/editbox_background"/>
 
         <View android:layout_height="24dp" android:layout_width="match_parent"/>
 
